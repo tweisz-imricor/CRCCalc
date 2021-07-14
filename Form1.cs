@@ -224,5 +224,40 @@ namespace CRCCalc
 
             }
         }
+
+        private void modbusButton_Click(object sender, EventArgs e)
+        {
+            ushort CrcRes = 0xFFFF;     // ModBus RTU always starts with 0xFFFF as its seed
+
+            ParseCrcDataText();
+
+            foreach (byte newByte in CurrentCrcInput)
+            {
+                try
+                {
+                    CrcRes = (ushort)(CrcRes ^ (newByte & 0xFFu));
+                    for (int Bit_Index = 8; Bit_Index != 0; Bit_Index--)
+                    {
+                        if ((CrcRes & 0x0001) != 0)
+                        {
+                            CrcRes >>= 1;
+                            CrcRes ^= 0xA001;
+                        }
+                        else
+                        {
+                            CrcRes >>= 1;
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+
+            CrcRes = (ushort)(((CrcRes & 0xFF00) >> 8) | ((CrcRes & 0x00FF) << 8));
+
+            modbusResultTextBox.Text = CrcRes.ToString("X4");
+        }
     }
 }

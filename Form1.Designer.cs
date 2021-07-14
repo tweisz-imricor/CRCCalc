@@ -48,6 +48,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lrc8ResultTextBox = new System.Windows.Forms.TextBox();
             this.lrc8Button = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.modbusResultTextBox = new System.Windows.Forms.TextBox();
+            this.modbusButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -266,12 +269,47 @@
             this.lrc8Button.UseVisualStyleBackColor = true;
             this.lrc8Button.Click += new System.EventHandler(this.lrc8Button_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(350, 62);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(22, 17);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "0x";
+            // 
+            // modbusResultTextBox
+            // 
+            this.modbusResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modbusResultTextBox.Location = new System.Drawing.Point(374, 59);
+            this.modbusResultTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.modbusResultTextBox.Name = "modbusResultTextBox";
+            this.modbusResultTextBox.Size = new System.Drawing.Size(58, 23);
+            this.modbusResultTextBox.TabIndex = 18;
+            // 
+            // modbusButton
+            // 
+            this.modbusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modbusButton.Location = new System.Drawing.Point(350, 26);
+            this.modbusButton.Margin = new System.Windows.Forms.Padding(2);
+            this.modbusButton.Name = "modbusButton";
+            this.modbusButton.Size = new System.Drawing.Size(81, 28);
+            this.modbusButton.TabIndex = 17;
+            this.modbusButton.Text = "ModBus";
+            this.modbusButton.UseVisualStyleBackColor = true;
+            this.modbusButton.Click += new System.EventHandler(this.modbusButton_Click);
+            // 
             // CrcMainForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 812);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.modbusResultTextBox);
+            this.Controls.Add(this.modbusButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lrc8ResultTextBox);
             this.Controls.Add(this.lrc8Button);
@@ -325,6 +363,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox lrc8ResultTextBox;
         private System.Windows.Forms.Button lrc8Button;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox modbusResultTextBox;
+        private System.Windows.Forms.Button modbusButton;
     }
 }
 
