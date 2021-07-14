@@ -259,5 +259,14 @@ namespace CRCCalc
 
             modbusResultTextBox.Text = CrcRes.ToString("X4");
         }
+
+        private void calcAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Crc16GoButton_Click(sender, e);
+            ccittButton_Click(sender, e);
+            can15Button_Click(sender, e);
+            lrc8Button_Click(sender, e);
+            modbusButton_Click(sender, e);
+        }
     }
 }

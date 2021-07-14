@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.modbusResultTextBox = new System.Windows.Forms.TextBox();
             this.modbusButton = new System.Windows.Forms.Button();
+            this.calcAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,15 +128,17 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.CheckOnClick = true;
-            this.optionsToolStripMenuItem.Enabled = false;
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calcAllToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
@@ -301,6 +304,14 @@
             this.modbusButton.UseVisualStyleBackColor = true;
             this.modbusButton.Click += new System.EventHandler(this.modbusButton_Click);
             // 
+            // calcAllToolStripMenuItem
+            // 
+            this.calcAllToolStripMenuItem.Name = "calcAllToolStripMenuItem";
+            this.calcAllToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
+            this.calcAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calcAllToolStripMenuItem.Text = "Calc All";
+            this.calcAllToolStripMenuItem.Click += new System.EventHandler(this.calcAllToolStripMenuItem_Click);
+            // 
             // CrcMainForm
             // 
             this.AllowDrop = true;
@@ -366,6 +377,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox modbusResultTextBox;
         private System.Windows.Forms.Button modbusButton;
+        private System.Windows.Forms.ToolStripMenuItem calcAllToolStripMenuItem;
     }
 }
 
